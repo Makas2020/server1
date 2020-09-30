@@ -1,7 +1,8 @@
 node {
+def mvnHome = tool 'Maven3'
 
-    def mvnHome = tool 'Maven3'
-    stage ("checkout") {
-        code generated from scripted
-    }
+stage ('Checkout') {
+
+checkout scm
+}
 }
